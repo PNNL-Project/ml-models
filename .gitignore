@@ -1,4 +1,6 @@
 data/
-.DS_Store
 venv
+
+.DS_Store
 */.ipynb_checkpoints/
+.ipynb_checkpoints/
