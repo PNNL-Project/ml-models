@@ -23,9 +23,23 @@ def predict(hour_0, hour_1, hour_2, hour_3, hour_4, hour_5, hour_6, hour_7, hour
     
     # Accept the feature values for clf.predict()
     prediction = clf.predict_proba([[hour_0, hour_1, hour_2, hour_3, hour_4, hour_5, hour_6, hour_7, hour_8, hour_9, hour_10, hour_11, hour_12, hour_13, hour_14, hour_15, hour_16, hour_17, hour_18, hour_19, hour_20, hour_21, hour_22, hour_23]])
+    
+    label_dict = {
+    0:'Sudden Spike',
+    1:'High-Low-High',
+    2:'Gradual Cooling',
+    3:'Highly Variable',
+    4:'Low-High-Low'
+    }
+    
+    #This logic is wrong and needs to get fixed. This does not map to all labels in the dictionary
+    if prediction[0][0] == 1:
+        result = label_dict[0]
+    else:
+        result = label_dict[1]
 
     # Return the prediction as a json
-    return {"prediction" : str(prediction)}
+    return {"prediction" : str(result)}
 
 def test():
     return {"Message": "Test is OK"}
