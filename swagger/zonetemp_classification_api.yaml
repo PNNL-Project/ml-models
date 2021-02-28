@@ -1,0 +1,162 @@
+swagger: '2.0'
+info:
+  title: ZoneTemp API
+  version: "0.1"
+  description: An API that classifies ZoneTemperature to groups
+
+paths:
+  /health:
+    get:
+      summary: Checks the health of the service
+      description: Returns the health status of the service
+      operationId: zonetemp_classification_api.health
+      responses:
+        '200':
+          description: Service is healthy
+        '500':
+          description: Service is unhealthy
+
+  /predict:
+    post:
+      summary: Entrypoint to our prediction function
+      operationId: zonetemp_classification_api.predict
+      consumes:
+      - multipart/form-data
+      produces:
+      - application/json
+      parameters:
+        - in: formData
+          name: hour_0
+          required: true
+          description: 12am
+          type: number
+        - in: formData
+          name: hour_1
+          required: true
+          description: 1am
+          type: number
+        - in: formData
+          name: hour_2
+          required: true
+          description: 2am
+          type: number
+        - in: formData
+          name: hour_3
+          required: true
+          description: 3am
+          type: number
+        - in: formData
+          name: hour_4
+          required: true
+          description: 4am
+          type: number
+        - in: formData
+          name: hour_5
+          required: true
+          description: 5am
+          type: number
+        - in: formData
+          name: hour_6
+          required: true
+          description: 6am
+          type: number
+        - in: formData
+          name: hour_7
+          required: true
+          description: 7am
+          type: number
+        - in: formData
+          name: hour_8
+          required: true
+          description: 8am
+          type: number
+        - in: formData
+          name: hour_9
+          required: true
+          description: 9am
+          type: number
+        - in: formData
+          name: hour_10
+          required: true
+          description: 10am
+          type: number
+        - in: formData
+          name: hour_11
+          required: true
+          description: 11am
+          type: number
+        - in: formData
+          name: hour_12
+          required: true
+          description: 12pm
+          type: number
+        - in: formData
+          name: hour_13
+          required: true
+          description: 1pm
+          type: number
+        - in: formData
+          name: hour_14
+          required: true
+          description: 2pm
+          type: number
+        - in: formData
+          name: hour_15
+          required: true
+          description: 3pm
+          type: number
+        - in: formData
+          name: hour_16
+          required: true
+          description: 4pm
+          type: number
+        - in: formData
+          name: hour_17
+          required: true
+          description: 5pm
+          type: number
+        - in: formData
+          name: hour_18
+          required: true
+          description: 6pm
+          type: number
+        - in: formData
+          name: hour_19
+          required: true
+          description: 7pm
+          type: number
+        - in: formData
+          name: hour_20
+          required: true
+          description: 8pm
+          type: number
+        - in: formData
+          name: hour_21
+          required: true
+          description: 9pm
+          type: number
+        - in: formData
+          name: hour_22
+          required: true
+          description: 10pm
+          type: number
+        - in: formData
+          name: hour_23
+          required: true
+          description: 11pm
+          type: number
+      responses:
+        '200':
+          description: Classification performed successfully
+        '500':
+          description: Unable to perform the classification
+        
+  /test:
+    get:
+      summary: Test
+      operationId: zonetemp_classification_api.test
+      responses:
+        '200':
+          description: Test is working
+        '500':
+          description: Test did not work
