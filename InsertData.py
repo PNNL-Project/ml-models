@@ -15,10 +15,9 @@ def getElements (line):
 
 def readData (lines, metric):
     try:
-        # client = mysql.connector.connect(user='root', password='password',
-        #                                  host='localhost', database='Test')
-        client = mysql.connector.connect(user='admin', password='11111111',
-                                        host='cs6510.cf5728vupsfu.us-east-1.rds.amazonaws.com', database='cs6510jeff')
+        # Note: Make sure to enter credentials before use
+        client = mysql.connector.connect(user='', password='',
+                                        host='', database='')
     except mysql.connector.Error as err:
         if err.errno == errorcode.ER_ACCESS_DENIED_ERROR:
             print("Incorrect user name or password")
