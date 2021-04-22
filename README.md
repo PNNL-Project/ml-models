@@ -1,7 +1,11 @@
 # Machine Learning Models
 
 ## Summary:  
-In order to raise more awareness about building data provided from the Systems Engineer Building (SEB), the team utilized the [CHISSL Tool](https://github.com/pnnl/chissl) on SEB data. The CHISSL tool allowed the team to find patterns within the data. Patterns were created along with a PNNL team member to make the following labels for the given units of the data:
+In order to raise more awareness about building data provided from the Systems Engineer Building (SEB), the team utilized the [CHISSL Tool](https://github.com/pnnl/chissl) on SEB data. 
+
+![](images/chissl-groups.png)
+![](images/chissl-graphs.png)
+The CHISSL tool allowed the team to find patterns within the data. Patterns observed and labels for those patterns were created along with a PNNL team member to make the following labels for the given units of the data:
 
 ```
 Zone Temperature 
